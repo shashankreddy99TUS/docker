@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/vlalphas
+kind: ClusterConfig
+
+metadata:
+   name: expense
+   region: us-east-1
+
+managedNodeGroup:
+ - name: expense
+   instancetype: ["m5.large", "t3.large", "c4.large","c5.large"]
+   desiredCapacity: 3
+   spot: true  
